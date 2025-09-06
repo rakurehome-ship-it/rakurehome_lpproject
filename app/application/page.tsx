@@ -148,7 +148,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       />
                     </div>
                     <div>
@@ -162,7 +162,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       />
                     </div>
                     <div>
@@ -176,7 +176,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.lastNameKana}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       />
                     </div>
                     <div>
@@ -190,7 +190,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.firstNameKana}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       />
                     </div>
                     <div>
@@ -204,7 +204,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       />
                     </div>
                     <div>
@@ -218,7 +218,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       />
                     </div>
                     <div>
@@ -232,7 +232,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.birthDate}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       />
                     </div>
                     <div>
@@ -246,7 +246,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.availableStartDate}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       />
                     </div>
                   </div>
@@ -261,7 +261,7 @@ export default function ApplicationPage() {
                       required
                       value={formData.address}
                       onChange={handleChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       placeholder="〒123-4567 東京都○○区○○1-2-3"
                     />
                   </div>
@@ -281,7 +281,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.desiredPosition}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       >
                         <option value="">選択してください</option>
                         <option value="リフォーム職人（経験者）">リフォーム職人（経験者）</option>
@@ -300,7 +300,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.experience}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       >
                         <option value="">選択してください</option>
                         <option value="未経験">未経験</option>
@@ -321,7 +321,7 @@ export default function ApplicationPage() {
                         required
                         value={formData.hasLicense}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                       >
                         <option value="">選択してください</option>
                         <option value="普通自動車免許のみ">普通自動車免許のみ</option>
@@ -341,7 +341,7 @@ export default function ApplicationPage() {
                           rows={3}
                           value={formData.licenseDetails}
                           onChange={handleChange}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                           placeholder="保有資格の詳細をご記入ください"
                         />
                       </div>
@@ -357,7 +357,7 @@ export default function ApplicationPage() {
                         rows={4}
                         value={formData.previousWork}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                         placeholder="これまでの職歴や関連する経験があればご記入ください"
                       />
                     </div>
@@ -373,7 +373,7 @@ export default function ApplicationPage() {
                         rows={5}
                         value={formData.motivation}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                         placeholder="志望動機や意気込みをご記入ください"
                       />
                     </div>
