@@ -35,28 +35,60 @@ export default function ApplicationPage() {
     setIsLoading(true)
     setError("")
 
+    console.log("[v0] Form data being submitted:", formData)
+
     try {
-      const response = await fetch(
+      // Try method 1: FormData approach (often works better with Google Apps Script)
+      const formDataToSend = new FormData()
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataToSend.append(key, value)
+      })
+      formDataToSend.append("submittedAt", new Date().toISOString())
+
+      console.log("[v0] Attempting FormData submission...")
+
+      let response = await fetch(
         "https://script.google.com/macros/s/AKfycbyNVL3z5VQrTttYlztE6CtxUhXQCmb_S6oM5aTkpYY_Bci2v3xyMucZG0tYywKY1JBQ/exec",
         {
           method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            ...formData,
-            submittedAt: new Date().toISOString(),
-          }),
+          body: formDataToSend,
         },
       )
 
-      // Since we're using no-cors mode, we can't check response status
-      // We'll assume success if no error is thrown
-      setSubmitted(true)
+      console.log("[v0] FormData response status:", response.status)
+
+      // If FormData doesn't work, try JSON approach
+      if (!response.ok) {
+        console.log("[v0] FormData failed, trying JSON approach...")
+
+        response = await fetch(
+          "https://script.google.com/macros/s/AKfycbyNVL3z5VQrTttYlztE6CtxUhXQCmb_S6oM5aTkpYY_Bci2v3xyMucZG0tYywKY1JBQ/exec",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              ...formData,
+              submittedAt: new Date().toISOString(),
+            }),
+          },
+        )
+
+        console.log("[v0] JSON response status:", response.status)
+      }
+
+      if (response.ok) {
+        console.log("[v0] Form submitted successfully!")
+        setSubmitted(true)
+      } else {
+        const errorText = await response.text()
+        console.log("[v0] Response error:", errorText)
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
     } catch (err) {
-      console.error("Form submission error:", err)
-      setError("送信中にエラーが発生しました。もう一度お試しください。")
+      console.error("[v0] Form submission error:", err)
+      setError("送信中にエラーが発生しました。Google Apps Scriptの設定を確認してください。")
     } finally {
       setIsLoading(false)
     }
@@ -349,7 +381,7 @@ export default function ApplicationPage() {
 
                     <div>
                       <label htmlFor="previousWork" className="block text-sm font-medium text-gray-700 mb-2">
-                        職歴・経験
+                        職歴・経歴
                       </label>
                       <textarea
                         id="previousWork"
@@ -358,7 +390,7 @@ export default function ApplicationPage() {
                         value={formData.previousWork}
                         onChange={handleChange}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
-                        placeholder="これまでの職歴や関連する経験があればご記入ください"
+                        placeholder="これまでの職歴や関連する経歴があればご記入ください"
                       />
                     </div>
 
